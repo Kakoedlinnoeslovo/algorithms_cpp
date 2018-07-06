@@ -19,8 +19,8 @@ public:
     vector<string> MORSE {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
     int bias = 97;
     
-    vector<string> temp_result;
     int res = 0;
+    set<string> result;
     int uniqueMorseRepresentations(vector<string>& words) {
         
         if ( words.empty() )
@@ -33,9 +33,8 @@ public:
             for (int c = 0; c <= words[i].size()-1; c++){
                 temp_word+=MORSE[int(words[i][c]) - bias];
             }
-            temp_result.push_back(temp_word);
+            result.insert(temp_word);
         }
-        set<string> result(temp_result.begin(), temp_result.end());
         res = int(result.size());
         return res;
     }
