@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:counting_bits.xcodeproj">
+      location = "self:find_all_dublicates_in_an_array.xcodeproj">
    </FileRef>
 </Workspace>
